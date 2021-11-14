@@ -1,4 +1,4 @@
-@import url(//db.onlinewebfonts.com/c/10231a2b20e3af26733b6221efa4e482?family=Samsung+Sharp+Sans+Bold);
+@import url(https://db.onlinewebfonts.com/c/10231a2b20e3af26733b6221efa4e482?family=Samsung+Sharp+Sans+Bold);
 
 *{
    margin: 0;
@@ -13,6 +13,7 @@ h1{
     color: #fff;
     font-size: 72px;
     z-index: 9999;
+    
 }
 
 #main-visual{
