@@ -6,23 +6,161 @@
 }
 
 body{
-    font-family: 'Samsung Sharp Sans Bold';
+    font-family: 'Samsung Sharp Sans Bold','samsungone';
 }
-
-h1{
+/* main-visual */
+.main-title .glitch{ 
     color: #fff;
-    font-size: 72px;
+    font-size: 5rem;
     z-index: 9999;
+    position: relative;
+    align-items: center;
+    line-height: 1.3;
     
+    text-shadow: 
+        0.05em 0 0 rgba(255, 0, 0, 0.75),
+        -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+        0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+
+    animation: glitch 500ms infinite;
 }
 
-#main-visual{
+.glitch span{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.glitch span:first-child{
+    animation: glitch 650ms infinite;
+    clip-path: polygon(0 0,100% 0, 100% 30%, 0 45%);
+    transform: translate(-0.025em,-0.0125em);
+    opacity: 0.8;
+}
+.glitch span:last-child{
+    animation: glitch 375ms infinite;
+    clip-path: polygon(0 60%,100% 60%, 100% 100%, 0 100%);
+    transform: translate(0.0125em,0.025em);
+    opacity: 0.8;
+}
+@keyframes glitch{
+    0%{
+        text-shadow: 
+        0.05em 0 0 rgba(255, 0, 0, 0.75),
+        -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
+        0.025em 0.05em 0 rgba(0, 0, 255, 0.75); 
+    }
+    14%{
+        text-shadow: 
+        0.05em 0 0 rgba(255, 0, 0, 0.75),
+        -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
+        0.025em 0.05em 0 rgba(0, 0, 255, 0.75); 
+    }
+    15%{
+        text-shadow: 
+        -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+        0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+        -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);  
+    }
+    49%{
+        text-shadow: 
+        -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+        0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+        -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);  
+    }
+    50%{
+        text-shadow: 
+        0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
+        0.05em 0 0 rgba(0, 255, 0, 0.75),
+        0 -0.05em 0 rgba(0, 0, 255, 0.75);  
+    }
+    99%{
+        text-shadow: 
+        0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
+        0.05em 0 0 rgba(0, 255, 0, 0.75),
+        0 -0.05em 0 rgba(0, 0, 255, 0.75);  
+    }
+    100%{
+        text-shadow: 
+        -0.025em 0 0 rgba(255, 0, 0, 0.75),
+        -0.025em -0.025em 0 rgba(0, 255, 0, 0.75),
+        -0.025em -0.05em 0 rgba(0, 0, 255, 0.75); 
+    }
+}   
+
+
+#main-visual-bg{
     position: absolute;
     background-color: #000;
-    height: 100vh;
+    height: 150vh;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
-    z-index: -1;
+    z-index: -2;
 }
+.main-visual{
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+}
+.main-title{
+    position: relative;
+}
+.Samsung-Logo{
+    width: 40%;
+    height: 20%;
+}
+.main-line::after{
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 55px;
+    top: 0;
+    left: 43%;
+    background: linear-gradient(#3404F3,#F50CA6);
+}
+.main-title p{
+    font-size: 1.5em;
+    font-weight: 700;
+}
+.main-img img{
+    width: 100%;
+    height: 100%;
+}
+/* Advantages */
+.advantages-bg{
+    position: absolute;
+    background-color: #201E1E;
+    width: 100%;
+    padding: 160px 0;
+    overflow-x: hidden;
+    z-index: -1;
+    clip-path: polygon(0% 0%,100% 15%, 100% 100%, 0% 100%);
+}
+
+.advantages-bg .advan-bg-text h2{
+    color: #121111;
+    font-size: 600px;
+}
+
+.advantages{
+    width: 80%;
+    margin: 8em auto 0;
+    align-items: center;
+}
+.advantages img{
+    width: 100%;
+}
+
+@media(prefers-reduced-motion:reduce){
+    *,::after,::before{
+        animation-delay: -1ms !important;
+        animation-duration: 1ms !important;
+        animation-iteration-count: 1 !important;
+        background-attachment: initial !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0s !important;
+        transition-delay: 0s !important;
+    }
+}
+
