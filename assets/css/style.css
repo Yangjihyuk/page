@@ -1,4 +1,8 @@
 @import url(https://db.onlinewebfonts.com/c/10231a2b20e3af26733b6221efa4e482?family=Samsung+Sharp+Sans+Bold);
+@font-face {
+    font-family: 'SamungOne';
+    src: url(../font/samsungone-cufonfonts/SamsungOne-700.ttf);
+}
 
 *{
    margin: 0;
@@ -6,9 +10,45 @@
 }
 
 body{
-    font-family: 'Samsung Sharp Sans Bold','samsungone';
+    font-family: 'Samsung Sharp Sans Bold','SamsungOne';
 }
 /* main-visual */
+#main-visual-bg{
+    position: absolute;
+    background-color: #000;
+    height: 150vh;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -2;
+}
+.main-visual{
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+}
+.main-title{
+    position: relative;
+}
+.Samsung-Logo{
+    width: 40%;
+    height: 20%;
+}
+.main-line::after{
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 55px;
+    top: 0;
+    left: 43%;
+    background: linear-gradient(#3404F3,#F50CA6);
+}
+.main-title p{
+    font-size: 1.5em;
+    font-weight: 700;
+    font-weight: 700;
+}
 .main-title .glitch{ 
     color: #fff;
     font-size: 5rem;
@@ -87,42 +127,6 @@ body{
     }
 }   
 
-
-#main-visual-bg{
-    position: absolute;
-    background-color: #000;
-    height: 150vh;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: -2;
-}
-.main-visual{
-    width: 100%;
-    margin: 0 auto;
-    align-items: center;
-}
-.main-title{
-    position: relative;
-}
-.Samsung-Logo{
-    width: 40%;
-    height: 20%;
-}
-.main-line::after{
-    content: "";
-    position: absolute;
-    width: 6px;
-    height: 55px;
-    top: 0;
-    left: 43%;
-    background: linear-gradient(#3404F3,#F50CA6);
-}
-.main-title p{
-    font-size: 1.5em;
-    font-weight: 700;
-}
 .main-img img{
     width: 100%;
     height: 100%;
@@ -146,11 +150,32 @@ body{
 .advantages{
     width: 80%;
     margin: 8em auto 0;
-    align-items: center;
+    align-items: end;
 }
 .advantages img{
     width: 100%;
 }
+.main-content01 p{
+    font-weight: 700;
+}
+.main-content02 p,h1{
+    font-weight: 700;
+}
+@media(max-width:993px){
+    .main-title .glitch{
+        font-size: 3rem;
+    }
+}
+@media(max-width:769px){
+    .advantages-bg{
+        clip-path: polygon(0% 0%,100% 8%, 100% 100%, 0% 100%);
+    }
+    .main-img img{
+        width: 80%;
+        
+    }
+}
+
 
 @media(prefers-reduced-motion:reduce){
     *,::after,::before{
