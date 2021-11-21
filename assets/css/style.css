@@ -39,7 +39,7 @@ body{
     content: "";
     position: absolute;
     width: 6px;
-    height: 55px;
+    height: 63px;
     top: 0;
     left: 43%;
     background: linear-gradient(#3404F3,#F50CA6);
@@ -145,6 +145,7 @@ body{
 .advantages-bg .advan-bg-text h2{
     color: #121111;
     font-size: 600px;
+    font-weight: 700;
 }
 
 .advantages{
@@ -161,19 +162,122 @@ body{
 .main-content02 p,h1{
     font-weight: 700;
 }
-@media(max-width:993px){
+@media(max-width:1200px){
+    /* main-visual */
+    .main-line::after{
+        height: 51px;
+    }
+    /* main-visual end */
+    
+    
+}
+@media(max-width:990px){
+     /* main-visual */
     .main-title .glitch{
         font-size: 3rem;
     }
+    .main-line::after{
+        height: 38px;
+    }
+    /* main-visual end */
+    
 }
 @media(max-width:769px){
-    .advantages-bg{
-        clip-path: polygon(0% 0%,100% 8%, 100% 100%, 0% 100%);
+    /* main-visual */
+    .main-line::after{
+        height: 45px;
+    }
+    .glitch span {
+        position: absolute;
+        top: 0;
+        left: 0px;
     }
     .main-img img{
         width: 80%;
         
     }
+    /* main-visual end */
+    /* .advantages-bg */
+    .advantages-bg{
+        clip-path: polygon(0% 0%,100% 8%, 100% 100%, 0% 100%);
+    }
+    
+     /* .advantages-bg end*/
+    
+}
+@media(max-width:576px){
+    /* main-visual */
+    .main-line::after{
+        height: 20%;
+    }
+    .main-title p {
+        font-size: 1.3em;
+    }
+    .glitch span {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    /* main-visual end */
+    
+  
+    
+}
+
+@media(max-width:484px){
+    /* main-visual */
+    .main-line::after{
+        height: 40px;
+    }
+    /* main-visual end */
+    /* .advantages-bg */
+    .advantages-bg{
+        clip-path: polygon(0% 0%,100% 8%, 100% 100%, 0% 100%);
+    }
+    
+     /* .advantages-bg end*/
+}
+
+@media(max-width:460px){
+    /* main-visual */
+    .main-line::after{
+        height: 15%;
+    }
+
+    .main-title .glitch{
+         font-size: 2em;
+    }
+    /* main-visual end */
+    /* .advantages-bg */
+    .advantages-bg{
+        clip-path: polygon(0% 0%,100% 6%, 100% 100%, 0% 100%);
+    }
+    
+     /* .advantages-bg end*/
+}
+
+@media(max-width:321px){
+    /* main-visual */
+    .main-title{
+        text-align: center;
+    }
+    .main-title .glitch{
+        font-size: 2em;  
+    }
+    .main-line::after{
+        height: 22px;
+        left: 70%;
+    }
+    .main-title p {
+        font-size: 1em;
+    }
+    /* main-visual end */
+    /* .advantages-bg */
+    .advantages-bg{
+        clip-path: polygon(0% 0%,100% 4%, 100% 100%, 0% 100%);
+    }
+    
+     /* .advantages-bg end*/
 }
 
 
